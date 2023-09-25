@@ -24,9 +24,9 @@ SECRET_KEY = 'django-insecure-#$68zcxfw4!)&ts5cyr399wraj3v8%vr(0rd$u1j@mw!5g25_&
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-
+#테스트일때만 트루
 ALLOWED_HOSTS = []
-
+#
 
 # Application definition
 
@@ -37,7 +37,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'first_app',
+    'second_app',
 ]
+#장고는 앱들의 집합이다. 
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -50,7 +53,7 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'intro.urls'
-
+#configuration, 설정
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -103,12 +106,13 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
-
+LANGUAGE_CODE = 'ko'
+#언어설정 영어는 'en-us'
 TIME_ZONE = 'UTC'
 
 USE_I18N = True
-
+#I nternationalizatio N의 줄임말: 국제언어
+#번외: L10N = L ocalizatio N : 현지어
 USE_TZ = True
 
 

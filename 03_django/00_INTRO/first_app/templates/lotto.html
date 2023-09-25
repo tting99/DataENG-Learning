@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>lotto1</h1>
+    {% comment %} django의 주석 {% endcomment %}
+    {% comment %} 중갈호 두개는 출력 {% endcomment %}
+    <p>
+        {{message}}
+        {{lucky_numbers}}
+    </p>
+    <ul>
+        {% for num in lucky_numbers %}
+        <li>{{ num }}</li>        
+        {% endfor %}
+    </ul>
+</body>
+</html>

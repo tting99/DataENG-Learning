@@ -15,8 +15,18 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include   #first앱에 대한 urls는 first앱 안에 urls에서 처리할거
+#그렇기때문에 그곳에 urls를 다 옮기고 여기랑 이어줘야 한다.(포워딩)
+#import path뒤에 include를 더 붙이고 아래로 가서 path('x/', include('first_app.urls')),작성
+#이러면 x뒤에/lotto이런식으로 주소를 입력하면 나온다. x는 임시값임 맘대로
+
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    #path('x/', include('first_app.urls')), 보통은 이름 아래처럼 하자.
+    path('first_app/', include('first_app.urls')),
+    path('second_app/', include('second_app.urls')),
+    # Req => ('요청url', 함수) 요청
+    # Res => () 응답
 ]

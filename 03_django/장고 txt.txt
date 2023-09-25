@@ -1,0 +1,21 @@
+프로젝트 시작: python manage.py startproject 이름
+앱 추가: python manage.py startapp 이름 - 그다음 마스터앱안에 셋팅에 INSTALLED_APPS에 추가한 앱 추가로 적어주기.
+
+새로만든 앱에 뷰.py에 우리가 응답으로 줄 함수를 적는거다. 여기다가 적고 urls에 임포트 해줄것.
+
+우리는 앞으로 html파일을 전달해줄것이다. 그러므로 우리는 first_app에서 templates(다른 이름으로 해도 되나 이 이름으로 하면 알아서 찾아서 이안에 html을 열어준다)라는 폴더를 만들자. 그리고 여기에 html파일을 만들자
+
+패키지Django쳐서 맨 위에 있는거 다운 해주고 이러면 !taps가 작동이 안됨 이거 해주기 위해서 
+커맨드 + , 누르고 설정 검색에 emmet들어가면 여기에 include languges들어가서 항목에 django-html 값에 html해주면 됨
+이러고 !tap확인해보자
+
+이렇게 html파일을 불러올 준비를 했다면 이제 HttpResponse클래스가 아니라 render을 쓸거다. rener쳐보면 인자로 두개 달라함. 맞추주고. Request,"asd.html"주자 여기서 중요한게 templates로 폴더이름이 돼있으면 자동으로 asd.html을 이걸 찾아준다는거
+
+
+
+터미널에서 테스트용 파이썬 콘솔 열고싶을때 -> ipython누르기
+특징!!! 이건 종료할때 ctl+D 해야댐
+
+
+
+
