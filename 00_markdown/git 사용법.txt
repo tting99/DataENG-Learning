@@ -1,0 +1,9 @@
+git init으로 초기화-깃 명령어 사용가능 - rm -rf .git 깃 삭제. git status로 상태확인. 
+git add 파일명 하면 스테이지에 올라감.
+git commit -m 커밋내용.  
+git push origin main
+
+
+git fetch 주소
+git pull
+
