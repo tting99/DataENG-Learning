@@ -1,3 +1,4 @@
+1일차 장고 시작부터 앱만들어서 html 띄워보기
 프로젝트 시작: python manage.py startproject 이름
 앱 추가: python manage.py startapp 이름 - 그다음 마스터앱안에 셋팅에 INSTALLED_APPS에 추가한 앱 추가로 적어주기.
 
@@ -16,6 +17,23 @@
 터미널에서 테스트용 파이썬 콘솔 열고싶을때 -> ipython누르기
 특징!!! 이건 종료할때 ctl+D 해야댐
 
+-------------------------------------------------------------------------------------------------
 
+2일차: reveiw해봄, 장고 block사용법~
 
+-block사용법
+ 블록 치고 복붙할 내용 작성. 코드 맨위에 entends "붙여놓을곳.html" 하면됨.
+
+-templates사용법
+ 이 프로젝트에서 전역으로 쓸 html파일을 만들려면 메인 폴더에 settings에  TEMPLATES부분에 DIRS에 BASE_DIR/'templates'
+->        
+'DIRS': [BASE_DIR/'templates'],
+        #BASE_DIR은 이 프로젝트에서 라는 뜻 -> 이 프로잭트 내에서 templates도 찾아달라는 뜻.
+
+-templates에서 주의할점. 
+ #템플릿 폴더를 찾을 때 settings에서 INSTALLED_APPS 위에서부터 순차적으로 템플릿 폴더를 찾는다 만약 이 아래 생성된 앱에 템플릿이 있다해도 그 전에 이미 review의 템플릿을 인지 했기때문에 아래 템플릿을 불러올 수 없다. 이런 현상을 막기위해 사용할 수 있는것-> 템플릿 폴더 아래에 다른 폴더를 만들자. 그리고 그 안에 html파일을 나두고 view.py 에서 return render(requst, 'ex.html')을 return render(requst, '새로운폴더이름/ex.html')
+
+-입력받는 방법
+ urls에서 주소 패턴에서 path('예시/<str:name>', views.함수1)이렇게하면 이 네임값이 veiws에 함수1의 두번째 인자부터 들어감(request다음인자부터 들어감.) 여기서 인자로 받을 때 주소패턴에 쓴 변수 이름이랑 똑같이 써쭤야함 ex) name
+이렇게 하고 
 
