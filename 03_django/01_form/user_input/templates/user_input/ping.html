@@ -1,13 +1,17 @@
 {% extends "base.html" %}
 {% block content %}
-<form action="">
+{% comment %} action 뒤에는 데이터를 보낼 목적지가 와야한다. {% endcomment %}
+<form action="/user_input/pong/"> 
     <p>
         <label for="username">Username</label>
-        <input type="text" id = "username">
+        <input type="text" id = "username" name = "username">{% comment %} 보낼 정보의 이름을 붙여줘야한다. (딕셔너리로 들어감 그 키값을 줄것.) {% endcomment %}
     </p>
     <p>
-        <label for="password">password</label>
-        <input type="text" id = "password">
+        <label for="password">Password</label>
+        <input type="password" id = "password" name = "password">
+    </p>
+    <p>
+        <input type="submit" value = '얍'>
     </p>
 </form>
 {% endblock content %}

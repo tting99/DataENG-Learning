@@ -12,4 +12,10 @@ def ping(request):
     return render(request,'user_input/ping.html')
 
 def pong(request):
-    return render(request,'user_input/pong.html')
+    # 받은데이터 딕셔너리 = request.GET
+    username = request.GET['username']
+    password = request.GET['password']
+    return render(request,'user_input/pong.html', {
+        'username':username,
+        'password':password,
+    })
