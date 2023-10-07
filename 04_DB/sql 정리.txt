@@ -1,0 +1,2 @@
+command에서 sql 사용시 그냥 홈 디렉토리에서 mysql -u root -p
+입력하면 비번치는거 나오고 쓸 수 있음.
