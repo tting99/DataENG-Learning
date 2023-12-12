@@ -25,7 +25,7 @@ from django.urls import path, include   #first앱에 대한 urls는 first앱 안
 urlpatterns = [
     path('admin/', admin.site.urls),
     #path('x/', include('first_app.urls')), 보통은 이름 아래처럼 하자.
-    path('first_app/', include('first_app.urls')),
+    path('first_app/', include('first_app.urls')), #first_app이라는 요청이 들어오면 first_app.url에 넘겨주겠다. 
     path('second_app/', include('second_app.urls')),
     # Req => ('요청url', 함수) 요청
     # Res => () 응답

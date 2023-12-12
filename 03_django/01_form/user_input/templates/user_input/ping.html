@@ -5,7 +5,9 @@
     <p>
         <label for="username">Username</label>
         <input type="text" id = "username" name = "username">{% comment %} 보낼 정보의 이름을 붙여줘야한다. (딕셔너리로 들어감 그 키값을 줄것.) {% endcomment %}
-    </p>
+    </p> 
+    {% comment %} 전달되는 데이터는 {username:철수}, 앞에 id는 라벨링을 위한것. 뒤에 네임은 키값 {% endcomment %}
+
     <p>
         <label for="password">Password</label>
         <input type="password" id = "password" name = "password">
